@@ -215,13 +215,12 @@ jobs:
           cat Header.md ./release_build/code.md > BodyFile.md
           cat BodyFile.md
           rm ./release_build/code.md
-          
 
       - name: Create a Release
         if: github.event_name == 'push'
         uses: ncipollo/release-action@v1.11.2
         with:
-          tag: $NEXT_VERSION
+          tag: ${{ env.NEXT_VERSION }}
           name: "MODFLOW and related programs binary executables"
           bodyFile: "./BodyFile.md"
           artifacts: "./release_build/*"
