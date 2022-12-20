@@ -143,7 +143,6 @@ jobs:
           cat Header.md
           cat Header.md ./release_build/code.md > BodyFile.md
           cat BodyFile.md
-          rm ./release_build/code.md
 
       - name: Update readme
         run: |
