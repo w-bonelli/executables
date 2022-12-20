@@ -41,6 +41,6 @@ def _clean_files() -> None:
 
 
 if __name__ == "__main__":
-    _create_code_json()
+    # _create_code_json()
     _update_readme()
     _clean_files()
