@@ -32,6 +32,7 @@ jobs:
           cache-environment: true
           cache-downloads: true
           init-shell: bash
+          create-args: mfpymake
 
       - name: Setup ${{ contains(fromJSON('["macos-14"]'), matrix.os) && 'gcc' || 'intel-classic' }} ${{ contains(fromJSON('["macos-14"]'), matrix.os) && 12 || 2021.7 }}
         uses: fortran-lang/setup-fortran@v1
